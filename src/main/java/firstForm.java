@@ -101,6 +101,13 @@ public class firstForm extends JFrame {
                     } else {
                         FileWriter myWriter = new FileWriter(filepathing(openFilenameInput.getText()), true);
                         phoneChains.put(Long.parseLong(RecordField3.getText()), identificator.get());
+                        if (!nameMap.containsKey(RecordField1.getText())) {
+                            ArrayList<Integer> x = new ArrayList<>();
+                            nameMap.put(RecordField1.getText(), x);
+                            x.add(identificator.get());
+                        } else {
+                            nameMap.get(RecordField1.getText()).add(identificator.get());
+                        }
                         identificator.getAndAdd(RecordField1.getText().length() + RecordField2.getText().length() + RecordField3.getText().length() + RecordField4.getText().length() + 1);
                         myWriter.write(RecordField1.getText() + "," + RecordField2.getText() + "," + RecordField3.getText() + "," + RecordField4.getText() + '\n');
                         myWriter.flush();
