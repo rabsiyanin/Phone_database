@@ -198,28 +198,52 @@ public class firstForm extends JFrame {
 
 
         deleteButton.addActionListener(s -> {
-            if (!numberWasFound(Long.parseLong(numberTextField.getText().trim()), phoneChains)) {
-                JOptionPane.showMessageDialog(parent, "Woah there! We don't have 'em boys with the mentioned phone number.");
-            } else {
-                String path = filepathing(openFilenameInput.getText());
-                RandomAccessFile fileWriter = null;
-                try {
-                    fileWriter = new RandomAccessFile(path, "rw");
-                } catch (FileNotFoundException ignored) {
+            if (!Objects.equals(numberTextField.getText(), "")) {
+                if (!numberWasFound(Long.parseLong(numberTextField.getText().trim()), phoneChains)) {
+                    JOptionPane.showMessageDialog(parent, "Woah there! We don't have 'em boys with the mentioned phone number.");
+                } else {
+                    String path = filepathing(openFilenameInput.getText());
+                    RandomAccessFile fileWriter = null;
+                    try {
+                        fileWriter = new RandomAccessFile(path, "rw");
+                    } catch (FileNotFoundException ignored) {
+                    }
+                    int index = (int) phoneChains.get(Long.parseLong(numberTextField.getText().trim()));
+                    String foundLineNumber;
+                    try {
+                        fileWriter.seek(index);
+                        foundLineNumber = fileWriter.readLine();
+                        String spaces = "                                                        ";
+                        spaces = spaces.substring(0, foundLineNumber.length());
+                        fileWriter.seek(index);
+                        fileWriter.writeBytes(spaces);
+                        updateTheSheetButton.doClick();
+                    } catch (IOException ignored) {
+                    }
+                    ;
                 }
-                int index = (int) phoneChains.get(Long.parseLong(numberTextField.getText().trim()));
-                String foundLineNumber;
-                try {
-                    fileWriter.seek(index);
-                    foundLineNumber = fileWriter.readLine();
-                    String spaces = "                                                        ";
-                    spaces = spaces.substring(0, foundLineNumber.length());
-                    fileWriter.seek(index);
-                    fileWriter.writeBytes(spaces);
-                    updateTheSheetButton.doClick();
-                } catch (IOException ignored) {
+            } else if (!Objects.equals(nameTextField.getText(), "")) {
+                if (!nameWasFound((nameTextField.getText().trim()), (HashMap) nameMap)) {
+                    JOptionPane.showMessageDialog(parent, "Woah there! We don't have 'em boys called like that.");
+                } else
+                {
+                    String path = filepathing(openFilenameInput.getText());
+                    RandomAccessFile fileWriter = null;
+                    try {fileWriter = new RandomAccessFile(path, "rw");} catch (FileNotFoundException ignored) {}
+                    for(int i = 0; i < nameMap.get(nameTextField.getText().trim()).size(); i++) {
+                        int index = (int) nameMap.get(nameTextField.getText().trim()).get(i);
+                        String foundLineNumber;
+                        try {
+                            fileWriter.seek(index);
+                            foundLineNumber = fileWriter.readLine();
+                            String spaces = "                                                        ";
+                            spaces = spaces.substring(0, foundLineNumber.length());
+                            fileWriter.seek(index);
+                            fileWriter.writeBytes(spaces);
+                            updateTheSheetButton.doClick();
+                        } catch (IOException ignored) {};
+                    }
                 }
-                ;
             }
         });
 
