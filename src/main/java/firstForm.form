@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="firstForm">
+  <grid id="27dc6" binding="firstGUI" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="1094" height="681"/>
+    </constraints>
+    <properties>
+      <preferredSize width="1100" height="868"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <tabbedpane id="53ad9" binding="tabbedPane1" default-binding="true">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="8ffcf" binding="OpenPane" layout-manager="GridLayoutManager" row-count="6" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Viewer"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="6a3b4" class="javax.swing.JButton" binding="clearSheetButton">
+                <constraints>
+                  <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="2" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="45"/>
+                    <maximum-size width="-1" height="45"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <contentAreaFilled value="false"/>
+                  <enabled value="false"/>
+                  <font name="DialogInput" size="16" style="1"/>
+                  <text value="Clear the Sheet"/>
+                </properties>
+              </component>
+              <component id="91e10" class="javax.swing.JButton" binding="addRecordButton" default-binding="true">
+                <constraints>
+                  <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="45"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <contentAreaFilled value="false"/>
+                  <enabled value="false"/>
+                  <font name="DialogInput" size="16" style="1"/>
+                  <text value="Add Record"/>
+                </properties>
+              </component>
+              <component id="c30a6" class="javax.swing.JFormattedTextField" binding="filenameCreated">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <scrollpane id="65103" binding="sheetPane">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="5" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="935c8" class="javax.swing.JTextArea" binding="sheetArea">
+                    <constraints/>
+                    <properties>
+                      <editable value="false"/>
+                      <font name="DejaVu Sans Mono" size="16" style="0"/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+              <component id="aa970" class="javax.swing.JButton" binding="deleteSheetButton">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="2" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="45"/>
+                    <maximum-size width="-1" height="45"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <contentAreaFilled value="false"/>
+                  <enabled value="false"/>
+                  <font name="DialogInput" size="16" style="1"/>
+                  <text value="Delete the Sheet"/>
+                </properties>
+              </component>
+              <component id="b395b" class="javax.swing.JButton" binding="backupCreateButton">
+                <constraints>
+                  <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <contentAreaFilled value="false"/>
+                  <enabled value="false"/>
+                  <font name="DialogInput" size="16" style="1"/>
+                  <text value="Create the Backup"/>
+                </properties>
+              </component>
+              <component id="9faa1" class="javax.swing.JButton" binding="restoreBackup">
+                <constraints>
+                  <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="2" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="45"/>
+                    <maximum-size width="-1" height="45"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <contentAreaFilled value="false"/>
+                  <enabled value="true"/>
+                  <font name="DialogInput" size="16" style="1"/>
+                  <text value="Restore the Backup"/>
+                </properties>
+              </component>
+              <component id="7df7b" class="javax.swing.JButton" binding="toXSLX">
+                <constraints>
+                  <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <contentAreaFilled value="false"/>
+                  <enabled value="false"/>
+                  <font name="DialogInput" size="16" style="1"/>
+                  <text value="Convert to XSLX"/>
+                </properties>
+              </component>
+              <component id="2094a" class="javax.swing.JButton" binding="createTheSheetButton" default-binding="true">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="2" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="45"/>
+                    <maximum-size width="-1" height="45"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <contentAreaFilled value="false"/>
+                  <font name="DialogInput" size="16" style="1"/>
+                  <text value="Create the Sheet"/>
+                </properties>
+              </component>
+              <component id="1a69a" class="javax.swing.JButton" binding="openButton">
+                <constraints>
+                  <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="45"/>
+                    <maximum-size width="-1" height="45"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <borderPainted value="true"/>
+                  <contentAreaFilled value="false"/>
+                  <font name="DialogInput" size="16" style="1"/>
+                  <opaque value="false"/>
+                  <text value="Open the Sheet"/>
+                </properties>
+              </component>
+              <component id="3d780" class="javax.swing.JTextField" binding="openFilenameInput">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="385bb" class="javax.swing.JButton" binding="searchByTheNumberButton" default-binding="true">
+                <constraints>
+                  <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="2" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="45"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <contentAreaFilled value="false"/>
+                  <enabled value="false"/>
+                  <font name="DialogInput" size="16" style="1"/>
+                  <text value="Search by the Number"/>
+                </properties>
+              </component>
+              <component id="477d2" class="javax.swing.JFormattedTextField" binding="numberTextField" default-binding="true">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="2" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="56a28" class="javax.swing.JButton" binding="searchByTheNameButton" default-binding="true">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="2" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="45"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <contentAreaFilled value="false"/>
+                  <enabled value="false"/>
+                  <font name="DialogInput" size="16" style="1"/>
+                  <text value="Search by the Name"/>
+                </properties>
+              </component>
+              <component id="69017" class="javax.swing.JTextField" binding="nameTextField" default-binding="true">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="2" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="ede10" class="javax.swing.JButton" binding="updateTheSheetButton" default-binding="true">
+                <constraints>
+                  <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="2" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="45"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <contentAreaFilled value="false"/>
+                  <enabled value="false"/>
+                  <font name="DialogInput" size="16" style="1"/>
+                  <text value="Update the Sheet"/>
+                </properties>
+              </component>
+              <component id="499f" class="javax.swing.JButton" binding="deleteButton">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="25"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <contentAreaFilled value="false"/>
+                  <enabled value="false"/>
+                  <font name="DialogInput" size="16" style="1"/>
+                  <text value="Delete Record"/>
+                </properties>
+              </component>
+              <component id="75fae" class="javax.swing.JFormattedTextField" binding="RecordField4">
+                <constraints>
+                  <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="269e0" class="javax.swing.JFormattedTextField" binding="RecordField3">
+                <constraints>
+                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="50281" class="javax.swing.JFormattedTextField" binding="RecordField2">
+                <constraints>
+                  <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="6887" class="javax.swing.JFormattedTextField" binding="RecordField1">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="1eb0b" class="javax.swing.JButton" binding="editRecordButton">
+                <constraints>
+                  <grid row="2" column="3" row-span="1" col-span="2" vsize-policy="2" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="25"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <contentAreaFilled value="false"/>
+                  <enabled value="false"/>
+                  <font name="DialogInput" size="16" style="1"/>
+                  <text value="Edit Record"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </tabbedpane>
+    </children>
+  </grid>
+</form>
